@@ -19,19 +19,19 @@ tools and libraries
  5-open login page to enter fields to login.
  6-go to home page to appear message (Hi, name account Welcome back).
 Create Maven project and put dependenices in pom.xml. 
-First Part:
+# First Part:
 create in src main package called pages inside it three classes they SignupPage,LoginPage and HomePage.
 firstly class signupPage create method signUpProcess_PartiallyAutomated to automate signup define locate elements and enter fields ,interact with fields than click manully captcha to continue sigup and then go next page LogingPage to enter  the same account and password  and  click login button then go to next page HomePage
 to verify login successful.
 secondly create method signUpProcess_FullyAutomated the same steps in pervious method but, fully automated without any human interact.
 
-Second Part:
+# Second Part:
 in the src Test create two packages base inside it BaseTest class to set configuration using annotation (BeforeClass,BeforeMethod,AfterMethod,AfterClass)
 second class SignupTest to test scanerios ,create three test cases to verify signup and login.
 first test case use data provider from another class  to set valid data in method signUpProcess_PartiallyAutomated and make assertion if login successful or not.
 second test case  use data provider from another class  to set invalid data in method signUpProcess_PartiallyAutomated and make assertion if login successful or not.
 third test case  use data provider from another class  to set valid data in method signUpProcess_FullyAutomated  and make assertion if login successful or not.
-Finally:
+# Finally:
 create testing.xml to run all test cases and generate test report, after running three test cases test results as below:
 first test case passed and verify login successful.
 second test case faild due to invalid date in enter phone field empty.
@@ -40,7 +40,7 @@ and create screenshots for test cases failure in resources directory and testng 
 
 
 
- General Describtion chanllages: after read task  sceanerio for singup find problem during process signup is repatcha (Im not robot) that repatcha is not automated and not recommanded for automation due to using make sure is not robot, but after search  there are find three solutions for captcha in selenium are:
+# General Describtion chanllages: after read task  sceanerio for singup find problem during process signup is repatcha (Im not robot) that repatcha is not automated and not recommanded for automation due to using make sure is not robot, but after search  there are find three solutions for captcha in selenium are:
  1-By disabling the Captcha in the testing environment:
  Disabling Captcha in the test environment would ensure that while testing a web application, the Captcha task is not required. While using Google’s open-source Captcha widget – reCAPTCHA v2, put in the Site Key and the Secret Key, (known as the test keys).  As a result, all verification requests will pass, and automated UI testing can be conducted seamlessly.
  2-Adding a hook to click the Captcha checkbox:
