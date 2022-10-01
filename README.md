@@ -11,18 +11,18 @@ tools and libraries
  Java programming,
  WebDriverManager.
  Steps:
- general scanerio: 
+ general scenario: 
  1-open browser.
  2-open website.
  3-open signup page.
  4-enter data fields to signup and click signup.
  5-open login page to enter fields to login.
  6-go to home page to appear message (Hi, name account Welcome back).
-Create Maven project and put dependenices in pom.xml (maven.compiler.source>17, org.seleniumhq.selenium,org.testng,webdrivermanager).
+Create Maven project and put dependencies  in pom.xml (maven.compiler.source>17, org.seleniumhq.selenium,org.testng,webdrivermanager).
 =======================================================================================================================================================================
 # First Part:
 create in src main package called pages inside it three classes they SignupPage,LoginPage and HomePage.
-firstly class signupPage create method signUpProcess_PartiallyAutomated to automate signup define locate elements and enter fields ,interact with fields than click manully captcha to continue sigup and then go next page LogingPage to enter  the same account and password  and  click login button then go to next page HomePage
+firstly class signupPage create method signUpProcess_PartiallyAutomated to automate signup define locate elements and enter fields ,interact with fields than click manually  captcha to continue signup and then go next page LogingPage to enter  the same account and password  and  click login button then go to next page HomePage
 to verify login successful.
 secondly create method signUpProcess_FullyAutomated the same steps in pervious method but, fully automated without any human interact.
 
@@ -36,13 +36,13 @@ third test case  use data provider from another class  to set valid data in meth
 # Finally:
 create testing.xml to run all test cases and generate test report, after running three test cases test results as below:
 first test case passed and verify login successful.
-second test case faild due to invalid date in enter phone field empty.
-third test case faild due to can not handle captcha fully automation.
+second test case failed  due to invalid date in enter phone field empty.
+third test case failed  due to can not handle captcha fully automation.
 and create screenshots for test cases failure in resources directory and testng report.
 
 =======================================================================================================================================================================
 
-# General Describtion chanllages: after read task  sceanerio for singup find problem during process signup is repatcha (Im not robot) that repatcha is not automated and not recommanded for automation due to using make sure is not robot, but after search  there are find three solutions for captcha in selenium are:
+# General Description challenges: after read task  scenario for signup find problem during process signup is recpatcha (I’m not robot) that recpatcha is not automated and not recommended for automation due to using make sure is not robot, but after search  there are find three solutions for captcha in selenium are:
  1-By disabling the Captcha in the testing environment:
  Disabling Captcha in the test environment would ensure that while testing a web application, the Captcha task is not required. While using Google’s open-source Captcha widget – reCAPTCHA v2, put in the Site Key and the Secret Key, (known as the test keys).  As a result, all verification requests will pass, and automated UI testing can be conducted seamlessly.
  =====================================================================================================================================================================
@@ -54,7 +54,7 @@ and create screenshots for test cases failure in resources directory and testng 
 In this method, a delay of 10-20s is introduced to freeze the captcha screen, so that the page does not suffer from the race condition, which generally happens while using automation testing on a web page with a Captcha element.
 ======================================================================================================================================================================
 After experiment second solution can  not interact with captcha because after click captcha appear captcha images to interact with images i need Captcha Solving APIs that use real human operators to solve captchas.  I don’t recommend one in particular.
-After experiment third solution can interact with captcha manully using delay and then continue automation task.
+After experiment third solution can interact with captcha manually  using delay and then continue automation task.
 
 
 
