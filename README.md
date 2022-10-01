@@ -3,7 +3,7 @@ automated task for signup and login for website phptravels.
 
 # How to use?  
 tools and libraries
- Intellij,
+ IntelliJ,
  Selenium,
  TestNG,
  Page Object Model(pom),
