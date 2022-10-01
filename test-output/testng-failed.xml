@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="D:/mohamed mokhtar/ITI SW TESTING/Test Automation/automation_task(failed)">
+    <classes>
+      <class name="signup.SignupTest">
+        <methods>
+          <include name="signupTest_Fully" invocation-numbers="0"/>
+          <include name="setUpSystem"/>
+          <include name="takeScreenShot"/>
+          <include name="openWebsite"/>
+          <include name="signupTest_InvalidData" invocation-numbers="0"/>
+          <include name="TearDown"/>
+        </methods>
+      </class> <!-- signup.SignupTest -->
+    </classes>
+  </test> <!-- D:/mohamed mokhtar/ITI SW TESTING/Test Automation/automation_task(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="D:/mohamed mokhtar/ITI SW TESTING/Test Automation/automation_task">
+        <classes>
+        <class name="signup.SignupTest">
+            <methods>
+                <include name="signupTest_Partially"/>
+                <include name="signupTest_InvalidData"/>
+                <include name="signupTest_Fully"/>
+            </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
